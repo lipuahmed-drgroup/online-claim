@@ -1,0 +1,14 @@
+C:\code\online-claims\bin\Release\online-claims.exe.config
+C:\code\online-claims\bin\Release\online-claims.exe
+C:\code\online-claims\bin\Release\online-claims.pdb
+C:\code\online-claims\bin\Release\EntityFramework.dll
+C:\code\online-claims\bin\Release\EntityFramework.SqlServer.dll
+C:\code\online-claims\bin\Release\log4net.dll
+C:\code\online-claims\bin\Release\Newtonsoft.Json.dll
+C:\code\online-claims\bin\Release\EntityFramework.xml
+C:\code\online-claims\bin\Release\EntityFramework.SqlServer.xml
+C:\code\online-claims\bin\Release\log4net.xml
+C:\code\online-claims\bin\Release\Newtonsoft.Json.xml
+C:\code\online-claims\obj\Release\online-claims.csproj.CopyComplete
+C:\code\online-claims\obj\Release\online-claims.exe
+C:\code\online-claims\obj\Release\online-claims.pdb

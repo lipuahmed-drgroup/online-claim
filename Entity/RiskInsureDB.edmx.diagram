@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fc22db0594ab4730b9c28ca75079cc7c" Name="Diagram1" ZoomLevel="51">
+        <EntityTypeShape EntityType="RiskVHAModel.t_Supplier" Width="1.5" PointX="3.375" PointY="25.875" />
+        <EntityTypeShape EntityType="RiskVHAModel.tblPhone2" Width="1.5" PointX="3.375" PointY="21.75" />
+        <EntityTypeShape EntityType="RiskVHAModel.tblScheme" Width="1.5" PointX="3.375" PointY="16.25" />
+        <AssociationConnector Association="RiskVHAModel.tblScheme_t_SuppliertblScheme" />
+        <EntityTypeShape EntityType="RiskVHAModel.tblClaim" Width="3.125" PointX="5.625" PointY="2.125" />
+        <AssociationConnector Association="RiskVHAModel.tblClaim_t_SuppliertblClaim" />
+        <AssociationConnector Association="RiskVHAModel.tblClaim_tblPhonetblClaim" />
+        <AssociationConnector Association="RiskVHAModel.tblClaim_tblPhonetblClaim1" />
+        <AssociationConnector Association="RiskVHAModel.tblClaim_tblSchemetblClaim" />
+        <EntityTypeShape EntityType="RiskVHAModel.tblPhone" Width="1.5" PointX="10.75" PointY="0.875" />
+        <EntityTypeShape EntityType="RiskVHAModel.tblClaimNote" Width="1.5" PointX="7.875" PointY="21.5" />
+        <AssociationConnector Association="RiskVHAModel.tblClaimNote_tblClaimtblClaimNote" />
+        <EntityTypeShape EntityType="RiskVHAModel.OnlineClaim" Width="1.5" PointX="0.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

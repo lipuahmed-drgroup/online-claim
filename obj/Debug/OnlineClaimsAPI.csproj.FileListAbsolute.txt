@@ -1,0 +1,15 @@
+C:\code\RiskInsureVHA2\OnlineClaimsAPI\bin\Debug\online-claims.exe.config
+C:\code\RiskInsureVHA2\OnlineClaimsAPI\bin\Debug\online-claims.exe
+C:\code\RiskInsureVHA2\OnlineClaimsAPI\bin\Debug\online-claims.pdb
+C:\code\RiskInsureVHA2\OnlineClaimsAPI\bin\Debug\EntityFramework.dll
+C:\code\RiskInsureVHA2\OnlineClaimsAPI\bin\Debug\EntityFramework.SqlServer.dll
+C:\code\RiskInsureVHA2\OnlineClaimsAPI\bin\Debug\log4net.dll
+C:\code\RiskInsureVHA2\OnlineClaimsAPI\bin\Debug\Newtonsoft.Json.dll
+C:\code\RiskInsureVHA2\OnlineClaimsAPI\bin\Debug\EntityFramework.xml
+C:\code\RiskInsureVHA2\OnlineClaimsAPI\bin\Debug\EntityFramework.SqlServer.xml
+C:\code\RiskInsureVHA2\OnlineClaimsAPI\bin\Debug\log4net.xml
+C:\code\RiskInsureVHA2\OnlineClaimsAPI\bin\Debug\Newtonsoft.Json.xml
+C:\code\RiskInsureVHA2\OnlineClaimsAPI\obj\Debug\OnlineClaimsAPI.csproj.CopyComplete
+C:\code\RiskInsureVHA2\OnlineClaimsAPI\obj\Debug\online-claims.exe
+C:\code\RiskInsureVHA2\OnlineClaimsAPI\obj\Debug\online-claims.pdb
+C:\code\RiskInsureVHA2\OnlineClaimsAPI\obj\Debug\OnlineClaimsAPI.csproj.CoreCompileInputs.cache

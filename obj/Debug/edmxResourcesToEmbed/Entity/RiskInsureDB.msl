@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RiskVHAModelStoreContainer" CdmEntityContainer="RiskVHAEntities">
+    <EntitySetMapping Name="t_Supplier">
+      <EntityTypeMapping TypeName="RiskVHAModel.t_Supplier">
+        <MappingFragment StoreEntitySet="t_Supplier">
+          <ScalarProperty Name="SSMA_TimeStamp" ColumnName="SSMA_TimeStamp" />
+          <ScalarProperty Name="Output" ColumnName="Output" />
+          <ScalarProperty Name="Sup_FreightSimOnly" ColumnName="Sup_FreightSimOnly" />
+          <ScalarProperty Name="Sup_FreightPhoneOnly" ColumnName="Sup_FreightPhoneOnly" />
+          <ScalarProperty Name="Sup_FreightPhoneSim" ColumnName="Sup_FreightPhoneSim" />
+          <ScalarProperty Name="Sup_SimCardPrice" ColumnName="Sup_SimCardPrice" />
+          <ScalarProperty Name="Keep" ColumnName="Keep" />
+          <ScalarProperty Name="sup_ReplacementSIMCardSchemeId" ColumnName="sup_ReplacementSIMCardSchemeId" />
+          <ScalarProperty Name="sup_ReplacementPhoneSchemeId" ColumnName="sup_ReplacementPhoneSchemeId" />
+          <ScalarProperty Name="sup_Name" ColumnName="sup_Name" />
+          <ScalarProperty Name="sup_id" ColumnName="sup_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPhone2">
+      <EntityTypeMapping TypeName="RiskVHAModel.tblPhone2">
+        <MappingFragment StoreEntitySet="tblPhone2">
+          <ScalarProperty Name="ImportModel" ColumnName="ImportModel" />
+          <ScalarProperty Name="ImportColour" ColumnName="ImportColour" />
+          <ScalarProperty Name="UpdateUserID" ColumnName="UpdateUserID" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MakersCode" ColumnName="MakersCode" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+          <ScalarProperty Name="PhoneID" ColumnName="PhoneID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSchemes">
+      <EntityTypeMapping TypeName="RiskVHAModel.tblScheme">
+        <MappingFragment StoreEntitySet="tblScheme">
+          <ScalarProperty Name="SSMA_TimeStamp" ColumnName="SSMA_TimeStamp" />
+          <ScalarProperty Name="Output" ColumnName="Output" />
+          <ScalarProperty Name="Keep" ColumnName="Keep" />
+          <ScalarProperty Name="sch_sup_id" ColumnName="sch_sup_id" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="UpdateUserID" ColumnName="UpdateUserID" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="FreightSimOnly" ColumnName="FreightSimOnly" />
+          <ScalarProperty Name="FreightPhoneOnly" ColumnName="FreightPhoneOnly" />
+          <ScalarProperty Name="FreightPhoneSim" ColumnName="FreightPhoneSim" />
+          <ScalarProperty Name="SimCardPrice" ColumnName="SimCardPrice" />
+          <ScalarProperty Name="SchemeName" ColumnName="SchemeName" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetClaimNumber" FunctionName="RiskVHAModel.Store.GetClaimNumber" />
+    <FunctionImportMapping FunctionImportName="NewClaim" FunctionName="RiskVHAModel.Store.NewClaim" />
+    <EntitySetMapping Name="tblClaims">
+      <EntityTypeMapping TypeName="RiskVHAModel.tblClaim">
+        <MappingFragment StoreEntitySet="tblClaim">
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="OnLineClaimID" ColumnName="OnLineClaimID" />
+          <ScalarProperty Name="ApprovedClaimType" ColumnName="ApprovedClaimType" />
+          <ScalarProperty Name="PolicyNumber" ColumnName="PolicyNumber" />
+          <ScalarProperty Name="cla_ClosedReason" ColumnName="cla_ClosedReason" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="SimRequired" ColumnName="SimRequired" />
+          <ScalarProperty Name="BAN" ColumnName="BAN" />
+          <ScalarProperty Name="VHACAPIN" ColumnName="VHACAPIN" />
+          <ScalarProperty Name="CurrentUser" ColumnName="CurrentUser" />
+          <ScalarProperty Name="VHAInvolve" ColumnName="VHAInvolve" />
+          <ScalarProperty Name="CancelInsuranceDate" ColumnName="CancelInsuranceDate" />
+          <ScalarProperty Name="RepairerPaidStatusDate" ColumnName="RepairerPaidStatusDate" />
+          <ScalarProperty Name="ExcessPaidStatusDate" ColumnName="ExcessPaidStatusDate" />
+          <ScalarProperty Name="DateTimeSimReplaced" ColumnName="DateTimeSimReplaced" />
+          <ScalarProperty Name="InteractionNotesReceived" ColumnName="InteractionNotesReceived" />
+          <ScalarProperty Name="BillReceived" ColumnName="BillReceived" />
+          <ScalarProperty Name="PhotoIDReceived" ColumnName="PhotoIDReceived" />
+          <ScalarProperty Name="CaseManager" ColumnName="CaseManager" />
+          <ScalarProperty Name="WarningNote" ColumnName="WarningNote" />
+          <ScalarProperty Name="letterRec_IPhoneDamage" ColumnName="letterRec_IPhoneDamage" />
+          <ScalarProperty Name="SSMA_TimeStamp" ColumnName="SSMA_TimeStamp" />
+          <ScalarProperty Name="oPhone" ColumnName="oPhone" />
+          <ScalarProperty Name="oUseSupplier" ColumnName="oUseSupplier" />
+          <ScalarProperty Name="oSupplierName" ColumnName="oSupplierName" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="CashSettleAmount" ColumnName="CashSettleAmount" />
+          <ScalarProperty Name="LetterRec_Damaged" ColumnName="LetterRec_Damaged" />
+          <ScalarProperty Name="LetterRec_IMEI" ColumnName="LetterRec_IMEI" />
+          <ScalarProperty Name="CustomerEmail" ColumnName="CustomerEmail" />
+          <ScalarProperty Name="RPHID_MIA" ColumnName="RPHID_MIA" />
+          <ScalarProperty Name="CPHID_MIA" ColumnName="CPHID_MIA" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="cla_IMEINotBlockedReason" ColumnName="cla_IMEINotBlockedReason" />
+          <ScalarProperty Name="cla_ProofOfPurchase" ColumnName="cla_ProofOfPurchase" />
+          <ScalarProperty Name="cla_DeclineReason" ColumnName="cla_DeclineReason" />
+          <ScalarProperty Name="cla_IMEIBlocked" ColumnName="cla_IMEIBlocked" />
+          <ScalarProperty Name="cla_ReplacePhoneRRP" ColumnName="cla_ReplacePhoneRRP" />
+          <ScalarProperty Name="cla_ProofOfForcibleEntry" ColumnName="cla_ProofOfForcibleEntry" />
+          <ScalarProperty Name="cla_DateReportedToSP" ColumnName="cla_DateReportedToSP" />
+          <ScalarProperty Name="cla_TerminalId" ColumnName="cla_TerminalId" />
+          <ScalarProperty Name="cla_InsuranceType" ColumnName="cla_InsuranceType" />
+          <ScalarProperty Name="cla_ReplaceSIMCard_SuppliersCode" ColumnName="cla_ReplaceSIMCard_SuppliersCode" />
+          <ScalarProperty Name="cla_ReplacePhone_SuppliersCode" ColumnName="cla_ReplacePhone_SuppliersCode" />
+          <ScalarProperty Name="cla_ReplaceSimCardID" ColumnName="cla_ReplaceSimCardID" />
+          <ScalarProperty Name="cla_ReplaceSIMCard_sup_id" ColumnName="cla_ReplaceSIMCard_sup_id" />
+          <ScalarProperty Name="cla_ReplacePhone_sup_id" ColumnName="cla_ReplacePhone_sup_id" />
+          <ScalarProperty Name="cla_OtherPaidToDate2" ColumnName="cla_OtherPaidToDate2" />
+          <ScalarProperty Name="cla_OtherPaidTo2" ColumnName="cla_OtherPaidTo2" />
+          <ScalarProperty Name="cla_RepairerPaidToDate2" ColumnName="cla_RepairerPaidToDate2" />
+          <ScalarProperty Name="cla_RepairerPaidTo2" ColumnName="cla_RepairerPaidTo2" />
+          <ScalarProperty Name="cla_PhoneAccessoriesPaidDate4" ColumnName="cla_PhoneAccessoriesPaidDate4" />
+          <ScalarProperty Name="cla_PhoneAccessoriesPaidTo4" ColumnName="cla_PhoneAccessoriesPaidTo4" />
+          <ScalarProperty Name="cla_PhoneAccessoriesPaidDate3" ColumnName="cla_PhoneAccessoriesPaidDate3" />
+          <ScalarProperty Name="cla_PhoneAccessoriesPaidTo3" ColumnName="cla_PhoneAccessoriesPaidTo3" />
+          <ScalarProperty Name="cla_PhoneAccessoriesPaidDate2" ColumnName="cla_PhoneAccessoriesPaidDate2" />
+          <ScalarProperty Name="cla_PhoneAccessoriesPaidTo2" ColumnName="cla_PhoneAccessoriesPaidTo2" />
+          <ScalarProperty Name="cla_OutstandingAmount" ColumnName="cla_OutstandingAmount" />
+          <ScalarProperty Name="cla_RepairConsignmentNo" ColumnName="cla_RepairConsignmentNo" />
+          <ScalarProperty Name="cla_RepairReceiptNo" ColumnName="cla_RepairReceiptNo" />
+          <ScalarProperty Name="cla_BPayRequired" ColumnName="cla_BPayRequired" />
+          <ScalarProperty Name="cla_BPayNumber" ColumnName="cla_BPayNumber" />
+          <ScalarProperty Name="cla_BPayNumberSeed" ColumnName="cla_BPayNumberSeed" />
+          <ScalarProperty Name="cla_DoNotOrder" ColumnName="cla_DoNotOrder" />
+          <ScalarProperty Name="cla_LodgerAccountHolderNoEnglish" ColumnName="cla_LodgerAccountHolderNoEnglish" />
+          <ScalarProperty Name="cla_LodgerHasAuthority" ColumnName="cla_LodgerHasAuthority" />
+          <ScalarProperty Name="cla_CCAmount" ColumnName="cla_CCAmount" />
+          <ScalarProperty Name="cla_CCDateEntered" ColumnName="cla_CCDateEntered" />
+          <ScalarProperty Name="CCExpiryYear" ColumnName="CCExpiryYear" />
+          <ScalarProperty Name="cla_DeliveryState" ColumnName="cla_DeliveryState" />
+          <ScalarProperty Name="cla_ShortfallUpgradeCost" ColumnName="cla_ShortfallUpgradeCost" />
+          <ScalarProperty Name="cla_RepairerJobNo" ColumnName="cla_RepairerJobNo" />
+          <ScalarProperty Name="cla_AccOtherProductCode" ColumnName="cla_AccOtherProductCode" />
+          <ScalarProperty Name="cla_AccProductCode" ColumnName="cla_AccProductCode" />
+          <ScalarProperty Name="cla_OtherInvoiceNo3Amt" ColumnName="cla_OtherInvoiceNo3Amt" />
+          <ScalarProperty Name="cla_OtherInvoiceNo3" ColumnName="cla_OtherInvoiceNo3" />
+          <ScalarProperty Name="cla_OtherInvoiceNo2Amt" ColumnName="cla_OtherInvoiceNo2Amt" />
+          <ScalarProperty Name="cla_OtherInvoiceNo2" ColumnName="cla_OtherInvoiceNo2" />
+          <ScalarProperty Name="cla_OtherInvoiceNo1Amt" ColumnName="cla_OtherInvoiceNo1Amt" />
+          <ScalarProperty Name="cla_OtherInvoiceNo1" ColumnName="cla_OtherInvoiceNo1" />
+          <ScalarProperty Name="cla_OtherPaidToDate" ColumnName="cla_OtherPaidToDate" />
+          <ScalarProperty Name="cla_OtherPaidTo" ColumnName="cla_OtherPaidTo" />
+          <ScalarProperty Name="cla_RepairerInvoiceNo3Amt" ColumnName="cla_RepairerInvoiceNo3Amt" />
+          <ScalarProperty Name="cla_RepairerInvoiceNo3" ColumnName="cla_RepairerInvoiceNo3" />
+          <ScalarProperty Name="cla_RepairerInvoiceNo2Amt" ColumnName="cla_RepairerInvoiceNo2Amt" />
+          <ScalarProperty Name="cla_RepairerInvoiceNo2" ColumnName="cla_RepairerInvoiceNo2" />
+          <ScalarProperty Name="cla_RepairerInvoiceNo1Amt" ColumnName="cla_RepairerInvoiceNo1Amt" />
+          <ScalarProperty Name="cla_RepairerInvoiceNo1" ColumnName="cla_RepairerInvoiceNo1" />
+          <ScalarProperty Name="cla_RepairerPaidToDate" ColumnName="cla_RepairerPaidToDate" />
+          <ScalarProperty Name="cla_RepairerPaidTo" ColumnName="cla_RepairerPaidTo" />
+          <ScalarProperty Name="cla_SimCardInvoiceNo1Amt" ColumnName="cla_SimCardInvoiceNo1Amt" />
+          <ScalarProperty Name="cla_SimCardInvoiceNo1" ColumnName="cla_SimCardInvoiceNo1" />
+          <ScalarProperty Name="cla_SimCardPaidToDate" ColumnName="cla_SimCardPaidToDate" />
+          <ScalarProperty Name="cla_SimCardPaidTo" ColumnName="cla_SimCardPaidTo" />
+          <ScalarProperty Name="cla_PhoneAccessoriesInvoiceNo6Amt" ColumnName="cla_PhoneAccessoriesInvoiceNo6Amt" />
+          <ScalarProperty Name="cla_PhoneAccessoriesInvoiceNo6" ColumnName="cla_PhoneAccessoriesInvoiceNo6" />
+          <ScalarProperty Name="cla_PhoneAccessoriesInvoiceNo5Amt" ColumnName="cla_PhoneAccessoriesInvoiceNo5Amt" />
+          <ScalarProperty Name="cla_PhoneAccessoriesInvoiceNo5" ColumnName="cla_PhoneAccessoriesInvoiceNo5" />
+          <ScalarProperty Name="cla_PhoneAccessoriesInvoiceNo4Amt" ColumnName="cla_PhoneAccessoriesInvoiceNo4Amt" />
+          <ScalarProperty Name="cla_PhoneAccessoriesInvoiceNo4" ColumnName="cla_PhoneAccessoriesInvoiceNo4" />
+          <ScalarProperty Name="cla_PhoneAccessoriesInvoiceNo3Amt" ColumnName="cla_PhoneAccessoriesInvoiceNo3Amt" />
+          <ScalarProperty Name="cla_PhoneAccessoriesInvoiceNo3" ColumnName="cla_PhoneAccessoriesInvoiceNo3" />
+          <ScalarProperty Name="cla_PhoneAccessoriesInvoiceNo2Amt" ColumnName="cla_PhoneAccessoriesInvoiceNo2Amt" />
+          <ScalarProperty Name="cla_PhoneAccessoriesInvoiceNo1Amt" ColumnName="cla_PhoneAccessoriesInvoiceNo1Amt" />
+          <ScalarProperty Name="cla_PhoneAccessoriesPaidTo" ColumnName="cla_PhoneAccessoriesPaidTo" />
+          <ScalarProperty Name="cla_PhoneDealerState" ColumnName="cla_PhoneDealerState" />
+          <ScalarProperty Name="cla_PostalState" ColumnName="cla_PostalState" />
+          <ScalarProperty Name="cla_DeliverPersonLicense" ColumnName="cla_DeliverPersonLicense" />
+          <ScalarProperty Name="cla_DeliverPerson" ColumnName="cla_DeliverPerson" />
+          <ScalarProperty Name="cla_AuthoriseExcess" ColumnName="cla_AuthoriseExcess" />
+          <ScalarProperty Name="ABN" ColumnName="ABN" />
+          <ScalarProperty Name="InputTaxCredit" ColumnName="InputTaxCredit" />
+          <ScalarProperty Name="GSTRegisteredFlag" ColumnName="GSTRegisteredFlag" />
+          <ScalarProperty Name="DiaryDate" ColumnName="DiaryDate" />
+          <ScalarProperty Name="DiaryEntry" ColumnName="DiaryEntry" />
+          <ScalarProperty Name="TotalCostLessGST" ColumnName="TotalCostLessGST" />
+          <ScalarProperty Name="TotalClaimCost" ColumnName="TotalClaimCost" />
+          <ScalarProperty Name="CCExpiryMonthYear" ColumnName="CCExpiryMonthYear" />
+          <ScalarProperty Name="CCNumber" ColumnName="CCNumber" />
+          <ScalarProperty Name="CCName" ColumnName="CCName" />
+          <ScalarProperty Name="CancelledUserid" ColumnName="CancelledUserid" />
+          <ScalarProperty Name="CancelledStatusDate" ColumnName="CancelledStatusDate" />
+          <ScalarProperty Name="DeclinedUserid" ColumnName="DeclinedUserid" />
+          <ScalarProperty Name="DeclinedStatusDate" ColumnName="DeclinedStatusDate" />
+          <ScalarProperty Name="cla_PaidBalance" ColumnName="cla_PaidBalance" />
+          <ScalarProperty Name="cla_PaidFull" ColumnName="cla_PaidFull" />
+          <ScalarProperty Name="PaidUserid" ColumnName="PaidUserid" />
+          <ScalarProperty Name="PaidStatusDate" ColumnName="PaidStatusDate" />
+          <ScalarProperty Name="ApprovedUserid" ColumnName="ApprovedUserid" />
+          <ScalarProperty Name="ApprovedStatusDate" ColumnName="ApprovedStatusDate" />
+          <ScalarProperty Name="cla_InvoiceNo2" ColumnName="cla_InvoiceNo2" />
+          <ScalarProperty Name="cla_InvoiceNo1" ColumnName="cla_InvoiceNo1" />
+          <ScalarProperty Name="MoreInfoUserid" ColumnName="MoreInfoUserid" />
+          <ScalarProperty Name="MoreInfoStatusDate" ColumnName="MoreInfoStatusDate" />
+          <ScalarProperty Name="CorrectInfoFlag" ColumnName="CorrectInfoFlag" />
+          <ScalarProperty Name="DeliveryPostcode" ColumnName="DeliveryPostcode" />
+          <ScalarProperty Name="DeliverySuburb" ColumnName="DeliverySuburb" />
+          <ScalarProperty Name="DeliveryAddress2" ColumnName="DeliveryAddress2" />
+          <ScalarProperty Name="DeliveryAddress1" ColumnName="DeliveryAddress1" />
+          <ScalarProperty Name="CashCost" ColumnName="CashCost" />
+          <ScalarProperty Name="AssessmentCost" ColumnName="AssessmentCost" />
+          <ScalarProperty Name="RepairCost" ColumnName="RepairCost" />
+          <ScalarProperty Name="Repairer" ColumnName="Repairer" />
+          <ScalarProperty Name="FreightCost" ColumnName="FreightCost" />
+          <ScalarProperty Name="cla_FreightCostType" ColumnName="cla_FreightCostType" />
+          <ScalarProperty Name="SimcardCost" ColumnName="SimcardCost" />
+          <ScalarProperty Name="ReplaceVarianceCost" ColumnName="ReplaceVarianceCost" />
+          <ScalarProperty Name="ReplaceCost" ColumnName="ReplaceCost" />
+          <ScalarProperty Name="ReplacePhoneID" ColumnName="ReplacePhoneID" />
+          <ScalarProperty Name="CurrentPhoneID" ColumnName="CurrentPhoneID" />
+          <ScalarProperty Name="RepairReplaceCashIndicator" ColumnName="RepairReplaceCashIndicator" />
+          <ScalarProperty Name="GST" ColumnName="GST" />
+          <ScalarProperty Name="UnauthorisedCalls" ColumnName="UnauthorisedCalls" />
+          <ScalarProperty Name="Excess" ColumnName="Excess" />
+          <ScalarProperty Name="UpdateUserID" ColumnName="UpdateUserID" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="cla_UnattendedVehicle" ColumnName="cla_UnattendedVehicle" />
+          <ScalarProperty Name="cla_UnattendedIntentional" ColumnName="cla_UnattendedIntentional" />
+          <ScalarProperty Name="cla_UnattendedPublic" ColumnName="cla_UnattendedPublic" />
+          <ScalarProperty Name="PoliceReportNumber" ColumnName="PoliceReportNumber" />
+          <ScalarProperty Name="PoliceReportFlag" ColumnName="PoliceReportFlag" />
+          <ScalarProperty Name="AccOtherDescr" ColumnName="AccOtherDescr" />
+          <ScalarProperty Name="AccOther" ColumnName="AccOther" />
+          <ScalarProperty Name="AccHandsFree" ColumnName="AccHandsFree" />
+          <ScalarProperty Name="AccLeatherCase" ColumnName="AccLeatherCase" />
+          <ScalarProperty Name="cla_SimCardPreviousFlag" ColumnName="cla_SimCardPreviousFlag" />
+          <ScalarProperty Name="cla_SimCardNumber" ColumnName="cla_SimCardNumber" />
+          <ScalarProperty Name="cla_SimCardType" ColumnName="cla_SimCardType" />
+          <ScalarProperty Name="SimCardFlag" ColumnName="SimCardFlag" />
+          <ScalarProperty Name="CancelInsuranceFlag" ColumnName="CancelInsuranceFlag" />
+          <ScalarProperty Name="PreviousClaimDate" ColumnName="PreviousClaimDate" />
+          <ScalarProperty Name="PreviousClaimFlag" ColumnName="PreviousClaimFlag" />
+          <ScalarProperty Name="LossType" ColumnName="LossType" />
+          <ScalarProperty Name="DamageType" ColumnName="DamageType" />
+          <ScalarProperty Name="LossDate" ColumnName="LossDate" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="PhoneDealelPostCode" ColumnName="PhoneDealelPostCode" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="PhoneDealer" ColumnName="PhoneDealer" />
+          <ScalarProperty Name="PostalPostcode" ColumnName="PostalPostcode" />
+          <ScalarProperty Name="PostalSuburb" ColumnName="PostalSuburb" />
+          <ScalarProperty Name="PostalAddress2" ColumnName="PostalAddress2" />
+          <ScalarProperty Name="PostalAddress1" ColumnName="PostalAddress1" />
+          <ScalarProperty Name="ContactNumber2" ColumnName="ContactNumber2" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="LastPersonFamilyName" ColumnName="LastPersonFamilyName" />
+          <ScalarProperty Name="LastPersonGivenName" ColumnName="LastPersonGivenName" />
+          <ScalarProperty Name="cla_LodgerRelationship" ColumnName="cla_LodgerRelationship" />
+          <ScalarProperty Name="cla_LodgerFirstName" ColumnName="cla_LodgerFirstName" />
+          <ScalarProperty Name="cla_LodgerLastName" ColumnName="cla_LodgerLastName" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="GivenName" ColumnName="GivenName" />
+          <ScalarProperty Name="FamilyName" ColumnName="FamilyName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="InsuranceDate" ColumnName="InsuranceDate" />
+          <ScalarProperty Name="cla_IMEIDate" ColumnName="cla_IMEIDate" />
+          <ScalarProperty Name="NewIMEINumber" ColumnName="NewIMEINumber" />
+          <ScalarProperty Name="IMEINumber" ColumnName="IMEINumber" />
+          <ScalarProperty Name="MobilePhoneNumber" ColumnName="MobilePhoneNumber" />
+          <ScalarProperty Name="SchemeID" ColumnName="SchemeID" />
+          <ScalarProperty Name="InformationConsentFlag" ColumnName="InformationConsentFlag" />
+          <ScalarProperty Name="NESLodger" ColumnName="NESLodger" />
+          <ScalarProperty Name="AfterHoursFlag" ColumnName="AfterHoursFlag" />
+          <ScalarProperty Name="LodgedDate" ColumnName="LodgedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPhones">
+      <EntityTypeMapping TypeName="RiskVHAModel.tblPhone">
+        <MappingFragment StoreEntitySet="tblPhone">
+          <ScalarProperty Name="ImportModel" ColumnName="ImportModel" />
+          <ScalarProperty Name="ImportColour" ColumnName="ImportColour" />
+          <ScalarProperty Name="UpdateUserID" ColumnName="UpdateUserID" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MakersCode" ColumnName="MakersCode" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+          <ScalarProperty Name="PhoneID" ColumnName="PhoneID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblClaimNotes">
+      <EntityTypeMapping TypeName="RiskVHAModel.tblClaimNote">
+        <MappingFragment StoreEntitySet="tblClaimNote">
+          <ScalarProperty Name="SSMA_TimeStamp" ColumnName="SSMA_TimeStamp" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="Delete" ColumnName="Delete" />
+          <ScalarProperty Name="UpdateUserID" ColumnName="UpdateUserID" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="NoteType" ColumnName="NoteType" />
+          <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+          <ScalarProperty Name="TextNoteID" ColumnName="TextNoteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OnlineClaims">
+      <EntityTypeMapping TypeName="RiskVHAModel.OnlineClaim">
+        <MappingFragment StoreEntitySet="OnlineClaims">
+          <ScalarProperty Name="IsManualUpload" ColumnName="IsManualUpload" />
+          <ScalarProperty Name="PayLoad" ColumnName="PayLoad" />
+          <ScalarProperty Name="NeedToPull" ColumnName="NeedToPull" />
+          <ScalarProperty Name="LocationRealisedMissing" ColumnName="LocationRealisedMissing" />
+          <ScalarProperty Name="DateRealisedMissing" ColumnName="DateRealisedMissing" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="StateAbbv" ColumnName="StateAbbv" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="IMEIAttachedFilename" ColumnName="IMEIAttachedFilename" />
+          <ScalarProperty Name="RegularUserPhoto" ColumnName="RegularUserPhoto" />
+          <ScalarProperty Name="ClaimantPhoto" ColumnName="ClaimantPhoto" />
+          <ScalarProperty Name="DeclarationOfTruth" ColumnName="DeclarationOfTruth" />
+          <ScalarProperty Name="MobileNoInDeviceAtTimeOfDamage" ColumnName="MobileNoInDeviceAtTimeOfDamage" />
+          <ScalarProperty Name="PreviousLiquidDamage" ColumnName="PreviousLiquidDamage" />
+          <ScalarProperty Name="ChargingPortDamaged" ColumnName="ChargingPortDamaged" />
+          <ScalarProperty Name="EarphonesSpeakersWorking" ColumnName="EarphonesSpeakersWorking" />
+          <ScalarProperty Name="RearCameraDamaged" ColumnName="RearCameraDamaged" />
+          <ScalarProperty Name="BackGlassDamaged" ColumnName="BackGlassDamaged" />
+          <ScalarProperty Name="TouchWorking" ColumnName="TouchWorking" />
+          <ScalarProperty Name="ScreenDamaged" ColumnName="ScreenDamaged" />
+          <ScalarProperty Name="DisplayWorking" ColumnName="DisplayWorking" />
+          <ScalarProperty Name="PowerOnWorking" ColumnName="PowerOnWorking" />
+          <ScalarProperty Name="TypeOfDamage" ColumnName="TypeOfDamage" />
+          <ScalarProperty Name="PoliceReferenceNumber" ColumnName="PoliceReferenceNumber" />
+          <ScalarProperty Name="SIMReplacedDateTime" ColumnName="SIMReplacedDateTime" />
+          <ScalarProperty Name="HasSIMCardBeenReplaced" ColumnName="HasSIMCardBeenReplaced" />
+          <ScalarProperty Name="TelcoNetwork" ColumnName="TelcoNetwork" />
+          <ScalarProperty Name="MobileNoWhenMissing" ColumnName="MobileNoWhenMissing" />
+          <ScalarProperty Name="DetailedExplanation" ColumnName="DetailedExplanation" />
+          <ScalarProperty Name="WhereWasDevice" ColumnName="WhereWasDevice" />
+          <ScalarProperty Name="LastTimeDeviceSeen" ColumnName="LastTimeDeviceSeen" />
+          <ScalarProperty Name="AustraliaOrOverseas" ColumnName="AustraliaOrOverseas" />
+          <ScalarProperty Name="IncidentLocation" ColumnName="IncidentLocation" />
+          <ScalarProperty Name="DateOfIncident" ColumnName="DateOfIncident" />
+          <ScalarProperty Name="DeviceMakeModelColour" ColumnName="DeviceMakeModelColour" />
+          <ScalarProperty Name="WarrantyRepair" ColumnName="WarrantyRepair" />
+          <ScalarProperty Name="InsuredIMEISerial" ColumnName="InsuredIMEISerial" />
+          <ScalarProperty Name="InsuredMobileNumber" ColumnName="InsuredMobileNumber" />
+          <ScalarProperty Name="RegularUserDriverPassportNumber" ColumnName="RegularUserDriverPassportNumber" />
+          <ScalarProperty Name="RegularUserAuthorised" ColumnName="RegularUserAuthorised" />
+          <ScalarProperty Name="RegularUserRelationship" ColumnName="RegularUserRelationship" />
+          <ScalarProperty Name="RegularUserDateOfBirth" ColumnName="RegularUserDateOfBirth" />
+          <ScalarProperty Name="RegularUserSurname" ColumnName="RegularUserSurname" />
+          <ScalarProperty Name="RegularUserFirstname" ColumnName="RegularUserFirstname" />
+          <ScalarProperty Name="RegularUserTitle" ColumnName="RegularUserTitle" />
+          <ScalarProperty Name="OtherClaimant" ColumnName="OtherClaimant" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="AfterHoursContactNo" ColumnName="AfterHoursContactNo" />
+          <ScalarProperty Name="DaytimeContactNo" ColumnName="DaytimeContactNo" />
+          <ScalarProperty Name="DriverPassportNumber" ColumnName="DriverPassportNumber" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimDate" ColumnName="ClaimDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

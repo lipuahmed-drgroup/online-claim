@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RiskVHAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="OnlineClaims">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ClaimDate" Type="datetime2" Precision="7" />
+    <Property Name="ClaimType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="75" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Firstname" Type="nvarchar" MaxLength="100" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="100" />
+    <Property Name="DateOfBirth" Type="datetime2" Precision="7" />
+    <Property Name="DriverPassportNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="DaytimeContactNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="AfterHoursContactNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddressLine1" Type="nvarchar" MaxLength="2500" />
+    <Property Name="AddressLine2" Type="nvarchar" MaxLength="2500" />
+    <Property Name="Suburb" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="OtherClaimant" Type="bit" />
+    <Property Name="RegularUserTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegularUserFirstname" Type="nvarchar" MaxLength="250" />
+    <Property Name="RegularUserSurname" Type="nvarchar" MaxLength="250" />
+    <Property Name="RegularUserDateOfBirth" Type="datetime2" Precision="7" />
+    <Property Name="RegularUserRelationship" Type="nvarchar" MaxLength="250" />
+    <Property Name="RegularUserAuthorised" Type="bit" />
+    <Property Name="RegularUserDriverPassportNumber" Type="nvarchar" MaxLength="250" />
+    <Property Name="InsuredMobileNumber" Type="nvarchar" MaxLength="250" />
+    <Property Name="InsuredIMEISerial" Type="nvarchar" MaxLength="250" />
+    <Property Name="WarrantyRepair" Type="bit" />
+    <Property Name="DeviceMakeModelColour" Type="nvarchar" MaxLength="250" />
+    <Property Name="DateOfIncident" Type="datetime2" Precision="7" />
+    <Property Name="IncidentLocation" Type="nvarchar" MaxLength="2500" />
+    <Property Name="AustraliaOrOverseas" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastTimeDeviceSeen" Type="datetime2" Precision="7" />
+    <Property Name="WhereWasDevice" Type="nvarchar" MaxLength="250" />
+    <Property Name="DetailedExplanation" Type="nvarchar(max)" />
+    <Property Name="MobileNoWhenMissing" Type="nvarchar" MaxLength="50" />
+    <Property Name="TelcoNetwork" Type="nvarchar" MaxLength="50" />
+    <Property Name="HasSIMCardBeenReplaced" Type="bit" />
+    <Property Name="SIMReplacedDateTime" Type="datetime2" Precision="7" />
+    <Property Name="PoliceReferenceNumber" Type="nvarchar" MaxLength="1500" />
+    <Property Name="TypeOfDamage" Type="nvarchar" MaxLength="150" />
+    <Property Name="PowerOnWorking" Type="bit" />
+    <Property Name="DisplayWorking" Type="bit" />
+    <Property Name="ScreenDamaged" Type="bit" />
+    <Property Name="TouchWorking" Type="bit" />
+    <Property Name="BackGlassDamaged" Type="bit" />
+    <Property Name="RearCameraDamaged" Type="bit" />
+    <Property Name="EarphonesSpeakersWorking" Type="bit" />
+    <Property Name="ChargingPortDamaged" Type="bit" />
+    <Property Name="PreviousLiquidDamage" Type="bit" />
+    <Property Name="MobileNoInDeviceAtTimeOfDamage" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeclarationOfTruth" Type="bit" />
+    <Property Name="ClaimantPhoto" Type="nvarchar" MaxLength="2500" />
+    <Property Name="RegularUserPhoto" Type="nvarchar" MaxLength="2500" />
+    <Property Name="IMEIAttachedFilename" Type="nvarchar" MaxLength="250" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="300" />
+    <Property Name="StateAbbv" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime2" Precision="7" />
+    <Property Name="DateRealisedMissing" Type="datetime2" Precision="7" />
+    <Property Name="LocationRealisedMissing" Type="nvarchar" MaxLength="1500" />
+    <Property Name="NeedToPull" Type="bit" />
+    <Property Name="PayLoad" Type="text" />
+    <Property Name="IsManualUpload" Type="bit" />
+  </EntityType>
+  <EntityType Name="t_Supplier">
+    <Key>
+      <PropertyRef Name="sup_id" />
+    </Key>
+    <Property Name="sup_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sup_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="sup_ReplacementPhoneSchemeId" Type="int" />
+    <Property Name="sup_ReplacementSIMCardSchemeId" Type="int" />
+    <Property Name="Keep" Type="bit" />
+    <Property Name="Sup_SimCardPrice" Type="money" />
+    <Property Name="Sup_FreightPhoneSim" Type="money" />
+    <Property Name="Sup_FreightPhoneOnly" Type="money" />
+    <Property Name="Sup_FreightSimOnly" Type="money" />
+    <Property Name="Output" Type="bit" />
+    <Property Name="SSMA_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblClaim">
+    <Key>
+      <PropertyRef Name="ClaimNumber" />
+    </Key>
+    <Property Name="ClaimNumber" Type="nvarchar" MaxLength="8" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="9" />
+    <Property Name="LodgedDate" Type="datetime" />
+    <Property Name="AfterHoursFlag" Type="bit" />
+    <Property Name="NESLodger" Type="nvarchar" MaxLength="30" />
+    <Property Name="InformationConsentFlag" Type="bit" />
+    <Property Name="SchemeID" Type="int" />
+    <Property Name="MobilePhoneNumber" Type="nvarchar" MaxLength="16" />
+    <Property Name="IMEINumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="NewIMEINumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_IMEIDate" Type="datetime" />
+    <Property Name="InsuranceDate" Type="datetime" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FamilyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="GivenName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="10" />
+    <Property Name="AccountNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="cla_LodgerLastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_LodgerFirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_LodgerRelationship" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastPersonGivenName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastPersonFamilyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="ContactNumber2" Type="nvarchar" MaxLength="20" />
+    <Property Name="PostalAddress1" Type="nvarchar" MaxLength="50" />
+    <Property Name="PostalAddress2" Type="nvarchar" MaxLength="50" />
+    <Property Name="PostalSuburb" Type="nvarchar" MaxLength="26" />
+    <Property Name="PostalPostcode" Type="nvarchar" MaxLength="6" />
+    <Property Name="PhoneDealer" Type="nvarchar" MaxLength="50" />
+    <Property Name="Suburb" Type="nvarchar" MaxLength="25" />
+    <Property Name="PhoneDealelPostCode" Type="nvarchar" MaxLength="6" />
+    <Property Name="PurchaseDate" Type="datetime" />
+    <Property Name="LossDate" Type="datetime" />
+    <Property Name="DamageType" Type="nvarchar(max)" />
+    <Property Name="LossType" Type="nvarchar" MaxLength="30" />
+    <Property Name="PreviousClaimFlag" Type="bit" />
+    <Property Name="PreviousClaimDate" Type="datetime" />
+    <Property Name="CancelInsuranceFlag" Type="bit" />
+    <Property Name="SimCardFlag" Type="bit" />
+    <Property Name="cla_SimCardType" Type="nvarchar" MaxLength="20" />
+    <Property Name="cla_SimCardNumber" Type="nvarchar" MaxLength="30" />
+    <Property Name="cla_SimCardPreviousFlag" Type="bit" />
+    <Property Name="AccLeatherCase" Type="money" />
+    <Property Name="AccHandsFree" Type="money" />
+    <Property Name="AccOther" Type="money" />
+    <Property Name="AccOtherDescr" Type="nvarchar" MaxLength="50" />
+    <Property Name="PoliceReportFlag" Type="bit" />
+    <Property Name="PoliceReportNumber" Type="nvarchar" MaxLength="25" />
+    <Property Name="cla_UnattendedPublic" Type="bit" />
+    <Property Name="cla_UnattendedIntentional" Type="bit" />
+    <Property Name="cla_UnattendedVehicle" Type="bit" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUserID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Excess" Type="money" Nullable="false" />
+    <Property Name="UnauthorisedCalls" Type="money" />
+    <Property Name="GST" Type="money" />
+    <Property Name="RepairReplaceCashIndicator" Type="nvarchar" MaxLength="18" />
+    <Property Name="CurrentPhoneID" Type="int" />
+    <Property Name="ReplacePhoneID" Type="int" />
+    <Property Name="ReplaceCost" Type="money" />
+    <Property Name="ReplaceVarianceCost" Type="money" />
+    <Property Name="SimcardCost" Type="money" />
+    <Property Name="cla_FreightCostType" Type="nvarchar" MaxLength="50" />
+    <Property Name="FreightCost" Type="money" />
+    <Property Name="Repairer" Type="nvarchar" MaxLength="50" />
+    <Property Name="RepairCost" Type="money" />
+    <Property Name="AssessmentCost" Type="money" />
+    <Property Name="CashCost" Type="money" />
+    <Property Name="DeliveryAddress1" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeliveryAddress2" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeliverySuburb" Type="nvarchar" MaxLength="26" />
+    <Property Name="DeliveryPostcode" Type="nvarchar" MaxLength="6" />
+    <Property Name="CorrectInfoFlag" Type="bit" />
+    <Property Name="MoreInfoStatusDate" Type="datetime" />
+    <Property Name="MoreInfoUserid" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_InvoiceNo1" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_InvoiceNo2" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApprovedStatusDate" Type="datetime" />
+    <Property Name="ApprovedUserid" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaidStatusDate" Type="datetime" />
+    <Property Name="PaidUserid" Type="nvarchar" MaxLength="10" />
+    <Property Name="cla_PaidFull" Type="nvarchar" MaxLength="10" />
+    <Property Name="cla_PaidBalance" Type="nvarchar" MaxLength="255" />
+    <Property Name="DeclinedStatusDate" Type="datetime" />
+    <Property Name="DeclinedUserid" Type="nvarchar" MaxLength="10" />
+    <Property Name="CancelledStatusDate" Type="datetime" />
+    <Property Name="CancelledUserid" Type="varchar" MaxLength="50" />
+    <Property Name="CCName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CCNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="CCExpiryMonthYear" Type="nvarchar" MaxLength="5" />
+    <Property Name="TotalClaimCost" Type="money" />
+    <Property Name="TotalCostLessGST" Type="money" />
+    <Property Name="DiaryEntry" Type="nvarchar" MaxLength="255" />
+    <Property Name="DiaryDate" Type="datetime" />
+    <Property Name="GSTRegisteredFlag" Type="bit" />
+    <Property Name="InputTaxCredit" Type="real" />
+    <Property Name="ABN" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_AuthoriseExcess" Type="bit" />
+    <Property Name="cla_DeliverPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_DeliverPersonLicense" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_PostalState" Type="nvarchar" MaxLength="20" />
+    <Property Name="cla_PhoneDealerState" Type="nvarchar" MaxLength="20" />
+    <Property Name="cla_PhoneAccessoriesPaidTo" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_PhoneAccessoriesInvoiceNo1Amt" Type="money" />
+    <Property Name="cla_PhoneAccessoriesInvoiceNo2Amt" Type="money" />
+    <Property Name="cla_PhoneAccessoriesInvoiceNo3" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_PhoneAccessoriesInvoiceNo3Amt" Type="money" />
+    <Property Name="cla_PhoneAccessoriesInvoiceNo4" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_PhoneAccessoriesInvoiceNo4Amt" Type="money" />
+    <Property Name="cla_PhoneAccessoriesInvoiceNo5" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_PhoneAccessoriesInvoiceNo5Amt" Type="money" />
+    <Property Name="cla_PhoneAccessoriesInvoiceNo6" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_PhoneAccessoriesInvoiceNo6Amt" Type="money" />
+    <Property Name="cla_SimCardPaidTo" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_SimCardPaidToDate" Type="datetime" />
+    <Property Name="cla_SimCardInvoiceNo1" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_SimCardInvoiceNo1Amt" Type="money" />
+    <Property Name="cla_RepairerPaidTo" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_RepairerPaidToDate" Type="datetime" />
+    <Property Name="cla_RepairerInvoiceNo1" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_RepairerInvoiceNo1Amt" Type="money" />
+    <Property Name="cla_RepairerInvoiceNo2" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_RepairerInvoiceNo2Amt" Type="money" />
+    <Property Name="cla_RepairerInvoiceNo3" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_RepairerInvoiceNo3Amt" Type="money" />
+    <Property Name="cla_OtherPaidTo" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_OtherPaidToDate" Type="datetime" />
+    <Property Name="cla_OtherInvoiceNo1" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_OtherInvoiceNo1Amt" Type="money" />
+    <Property Name="cla_OtherInvoiceNo2" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_OtherInvoiceNo2Amt" Type="money" />
+    <Property Name="cla_OtherInvoiceNo3" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_OtherInvoiceNo3Amt" Type="money" />
+    <Property Name="cla_AccProductCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_AccOtherProductCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_RepairerJobNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_ShortfallUpgradeCost" Type="money" />
+    <Property Name="cla_DeliveryState" Type="nvarchar" MaxLength="20" />
+    <Property Name="CCExpiryYear" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_CCDateEntered" Type="datetime" />
+    <Property Name="cla_CCAmount" Type="money" />
+    <Property Name="cla_LodgerHasAuthority" Type="bit" />
+    <Property Name="cla_LodgerAccountHolderNoEnglish" Type="bit" />
+    <Property Name="cla_DoNotOrder" Type="bit" />
+    <Property Name="cla_BPayNumberSeed" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cla_BPayNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_BPayRequired" Type="bit" />
+    <Property Name="cla_RepairReceiptNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_RepairConsignmentNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_OutstandingAmount" Type="money" />
+    <Property Name="cla_PhoneAccessoriesPaidTo2" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_PhoneAccessoriesPaidDate2" Type="datetime" />
+    <Property Name="cla_PhoneAccessoriesPaidTo3" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_PhoneAccessoriesPaidDate3" Type="datetime" />
+    <Property Name="cla_PhoneAccessoriesPaidTo4" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_PhoneAccessoriesPaidDate4" Type="datetime" />
+    <Property Name="cla_RepairerPaidTo2" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_RepairerPaidToDate2" Type="datetime" />
+    <Property Name="cla_OtherPaidTo2" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_OtherPaidToDate2" Type="datetime" />
+    <Property Name="cla_ReplacePhone_sup_id" Type="int" />
+    <Property Name="cla_ReplaceSIMCard_sup_id" Type="int" />
+    <Property Name="cla_ReplaceSimCardID" Type="int" />
+    <Property Name="cla_ReplacePhone_SuppliersCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_ReplaceSIMCard_SuppliersCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_InsuranceType" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_TerminalId" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_DateReportedToSP" Type="datetime" />
+    <Property Name="cla_ProofOfForcibleEntry" Type="bit" />
+    <Property Name="cla_ReplacePhoneRRP" Type="money" />
+    <Property Name="cla_IMEIBlocked" Type="bit" />
+    <Property Name="cla_DeclineReason" Type="nvarchar" MaxLength="50" />
+    <Property Name="cla_ProofOfPurchase" Type="bit" />
+    <Property Name="cla_IMEINotBlockedReason" Type="nvarchar" MaxLength="255" />
+    <Property Name="DateAdded" Type="datetime" />
+    <Property Name="CPHID_MIA" Type="int" />
+    <Property Name="RPHID_MIA" Type="int" />
+    <Property Name="CustomerEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="LetterRec_IMEI" Type="datetime" />
+    <Property Name="LetterRec_Damaged" Type="datetime" />
+    <Property Name="CashSettleAmount" Type="money" />
+    <Property Name="FaxNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="oSupplierName" Type="nvarchar" MaxLength="50" />
+    <Property Name="oUseSupplier" Type="bit" />
+    <Property Name="oPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="SSMA_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="letterRec_IPhoneDamage" Type="datetime" />
+    <Property Name="WarningNote" Type="nvarchar" MaxLength="255" />
+    <Property Name="CaseManager" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhotoIDReceived" Type="bit" />
+    <Property Name="BillReceived" Type="bit" />
+    <Property Name="InteractionNotesReceived" Type="bit" />
+    <Property Name="DateTimeSimReplaced" Type="datetime" />
+    <Property Name="ExcessPaidStatusDate" Type="datetime" />
+    <Property Name="RepairerPaidStatusDate" Type="datetime" />
+    <Property Name="CancelInsuranceDate" Type="date" />
+    <Property Name="VHAInvolve" Type="bit" />
+    <Property Name="CurrentUser" Type="varchar" MaxLength="255" />
+    <Property Name="VHACAPIN" Type="varchar" MaxLength="255" />
+    <Property Name="BAN" Type="varchar" MaxLength="255" />
+    <Property Name="SimRequired" Type="bit" />
+    <Property Name="ClaimType" Type="varchar" MaxLength="50" />
+    <Property Name="cla_ClosedReason" Type="varchar" MaxLength="150" />
+    <Property Name="PolicyNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ApprovedClaimType" Type="varchar" MaxLength="150" />
+    <Property Name="OnLineClaimID" Type="int" />
+    <Property Name="ServiceType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblClaimNote">
+    <Key>
+      <PropertyRef Name="TextNoteID" />
+    </Key>
+    <Property Name="TextNoteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClaimNumber" Type="nvarchar" MaxLength="8" />
+    <Property Name="NoteType" Type="nvarchar" MaxLength="33" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUserID" Type="nvarchar" MaxLength="10" />
+    <Property Name="Delete" Type="bit" />
+    <Property Name="DateAdded" Type="datetime" />
+    <Property Name="SSMA_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPhone">
+    <Key>
+      <PropertyRef Name="PhoneID" />
+    </Key>
+    <Property Name="PhoneID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Make" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MakersCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUserID" Type="nvarchar" MaxLength="10" />
+    <Property Name="ImportColour" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImportModel" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblPhone2">
+    <Key>
+      <PropertyRef Name="PhoneID" />
+    </Key>
+    <Property Name="PhoneID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Make" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Model" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MakersCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateUserID" Type="nvarchar" MaxLength="10" />
+    <Property Name="ImportColour" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImportModel" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblScheme">
+    <Key>
+      <PropertyRef Name="SchemeID" />
+    </Key>
+    <Property Name="SchemeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SchemeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SimCardPrice" Type="money" />
+    <Property Name="FreightPhoneSim" Type="money" />
+    <Property Name="FreightPhoneOnly" Type="money" />
+    <Property Name="FreightSimOnly" Type="money" />
+    <Property Name="UpdateDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdateUserID" Type="nvarchar" MaxLength="10" />
+    <Property Name="Country" Type="nvarchar" MaxLength="3" />
+    <Property Name="sch_sup_id" Type="int" />
+    <Property Name="Keep" Type="bit" />
+    <Property Name="Output" Type="bit" />
+    <Property Name="SSMA_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <Association Name="tblClaim$t_SuppliertblClaim">
+    <End Role="t_Supplier" Type="Self.t_Supplier" Multiplicity="0..1" />
+    <End Role="tblClaim" Type="Self.tblClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_Supplier">
+        <PropertyRef Name="sup_id" />
+      </Principal>
+      <Dependent Role="tblClaim">
+        <PropertyRef Name="cla_ReplacePhone_sup_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblClaim$tblPhonetblClaim">
+    <End Role="tblPhone2" Type="Self.tblPhone2" Multiplicity="0..1" />
+    <End Role="tblClaim" Type="Self.tblClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPhone2">
+        <PropertyRef Name="PhoneID" />
+      </Principal>
+      <Dependent Role="tblClaim">
+        <PropertyRef Name="CurrentPhoneID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblClaim$tblPhonetblClaim1">
+    <End Role="tblPhone2" Type="Self.tblPhone2" Multiplicity="0..1" />
+    <End Role="tblClaim" Type="Self.tblClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPhone2">
+        <PropertyRef Name="PhoneID" />
+      </Principal>
+      <Dependent Role="tblClaim">
+        <PropertyRef Name="ReplacePhoneID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblClaim$tblSchemetblClaim">
+    <End Role="tblScheme" Type="Self.tblScheme" Multiplicity="0..1" />
+    <End Role="tblClaim" Type="Self.tblClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblScheme">
+        <PropertyRef Name="SchemeID" />
+      </Principal>
+      <Dependent Role="tblClaim">
+        <PropertyRef Name="SchemeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblClaimNote$tblClaimtblClaimNote">
+    <End Role="tblClaim" Type="Self.tblClaim" Multiplicity="0..1" />
+    <End Role="tblClaimNote" Type="Self.tblClaimNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblClaim">
+        <PropertyRef Name="ClaimNumber" />
+      </Principal>
+      <Dependent Role="tblClaimNote">
+        <PropertyRef Name="ClaimNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tblScheme$t_SuppliertblScheme">
+    <End Role="t_Supplier" Type="Self.t_Supplier" Multiplicity="0..1" />
+    <End Role="tblScheme" Type="Self.tblScheme" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t_Supplier">
+        <PropertyRef Name="sup_id" />
+      </Principal>
+      <Dependent Role="tblScheme">
+        <PropertyRef Name="sch_sup_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GetClaimNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="NewClaim" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="RiskVHAModelStoreContainer">
+    <EntitySet Name="OnlineClaims" EntityType="Self.OnlineClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="t_Supplier" EntityType="Self.t_Supplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblClaim" EntityType="Self.tblClaim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblClaimNote" EntityType="Self.tblClaimNote" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPhone" EntityType="Self.tblPhone" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPhone2" EntityType="Self.tblPhone2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblScheme" EntityType="Self.tblScheme" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="tblClaim$t_SuppliertblClaim" Association="Self.tblClaim$t_SuppliertblClaim">
+      <End Role="t_Supplier" EntitySet="t_Supplier" />
+      <End Role="tblClaim" EntitySet="tblClaim" />
+    </AssociationSet>
+    <AssociationSet Name="tblClaim$tblPhonetblClaim" Association="Self.tblClaim$tblPhonetblClaim">
+      <End Role="tblPhone2" EntitySet="tblPhone2" />
+      <End Role="tblClaim" EntitySet="tblClaim" />
+    </AssociationSet>
+    <AssociationSet Name="tblClaim$tblPhonetblClaim1" Association="Self.tblClaim$tblPhonetblClaim1">
+      <End Role="tblPhone2" EntitySet="tblPhone2" />
+      <End Role="tblClaim" EntitySet="tblClaim" />
+    </AssociationSet>
+    <AssociationSet Name="tblClaim$tblSchemetblClaim" Association="Self.tblClaim$tblSchemetblClaim">
+      <End Role="tblScheme" EntitySet="tblScheme" />
+      <End Role="tblClaim" EntitySet="tblClaim" />
+    </AssociationSet>
+    <AssociationSet Name="tblClaimNote$tblClaimtblClaimNote" Association="Self.tblClaimNote$tblClaimtblClaimNote">
+      <End Role="tblClaim" EntitySet="tblClaim" />
+      <End Role="tblClaimNote" EntitySet="tblClaimNote" />
+    </AssociationSet>
+    <AssociationSet Name="tblScheme$t_SuppliertblScheme" Association="Self.tblScheme$t_SuppliertblScheme">
+      <End Role="t_Supplier" EntitySet="t_Supplier" />
+      <End Role="tblScheme" EntitySet="tblScheme" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
