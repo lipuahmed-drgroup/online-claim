@@ -1,6 +1,10 @@
-bin/*
+/bin/
 obj/*
 *.suo
 .vs/
 
-bin/Debug/*
+/bin/Debug/*
+/obj/Debug
+/bin/Debug/*.exe
+bin/Debug/online-claims.exe
+obj/Debug/online-claims.exe
